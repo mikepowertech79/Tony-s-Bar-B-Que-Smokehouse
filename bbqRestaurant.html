@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tony's Bar B Que Smokehouse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+		
+		
+        .header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        overflow: hidden; /* Ensures that the pseudo-elements don't overflow the header */
+		}
+
+		.header h1 {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			color: #FFF;
+			position: relative;
+			font-size: 3em;
+			animation: neon 1.5s ease-in-out infinite alternate;
+		}
+
+		/* Keyframes for neon sign effect */
+		@keyframes neon {
+			from {
+				text-shadow:
+				0 0 10px #fff,
+				0 0 20px #fff,
+				0 0 30px #d35400,
+				0 0 40px #d35400,
+				0 0 50px #d35400,
+				0 0 60px #d35400,
+				0 0 70px #d35400;
+			}
+			to {
+				text-shadow:
+				0 0 5px #fff,
+				0 0 10px #fff,
+				0 0 15px #d35400,
+				0 0 20px #d35400,
+				0 0 25px #d35400,
+				0 0 30px #d35400,
+				0 0 35px #d35400;
+			}
+		}
+		
+		
+		
+		
+		
+		
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+        .menu {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .menu h2 {
+            color: #d35400;
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .menu-item img {
+            width: 30%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .item-description {
+            text-align: left;
+            width: 70%;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #d35400;
+            text-decoration: none;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+		
+		/* Chat box styles */
+        .chat-box {
+            position: fixed;
+            bottom: 100px; /* Position above the footer */
+            right: 20px;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+            padding: 10px;
+            display: none;
+        }
+        .chat-box input, .chat-box button {
+			box-sizing: border-box; /* Add this line to include padding and borders in the width */
+			width: calc(100% - 20px); /* Subtract the total horizontal padding from the width */
+			padding: 10px;
+			margin: 5px 0;
+		}
+		
+		/* Styling for the reservation button */
+        .reservation-button {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            padding: 15px 30px;
+            background-color: #d35400; /* Eye-catching color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            animation: pulse 2s infinite; /* Animation to grab attention */
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        }
+
+        .reservation-button:hover {
+            background-color: #e67e22; /* Slightly lighter color on hover */
+        }
+
+        /* Keyframes for the pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(214, 84, 0, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(214, 84, 0, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(214, 84, 0, 0);
+            }
+        }
+		
+		
+		
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tony's Bar B Que Smokehouse</h1>
+    </div>
+    <div class="main-content">
+        <h2>Welcome to Our BBQ Heaven!</h2>
+        <p>Discover the authentic BBQ experience with our slow-cooked, smoked dishes.</p>
+    </div>
+    <div class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="smoked-brisket.jpg" alt="Smoked Brisket">
+            <div class="item-description">
+                <h3>Smoked Brisket</h3>
+                <p>Tender, slow-cooked brisket with a smoky flavor.</p>
+                <p><strong>Price:</strong> $15</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="BBQ-Pork_Ribs.jpg" alt="BBQ-Pork Ribs">
+            <div class="item-description">
+                <h3>Pulled Pork BBQ-Pork Ribs</h3>
+                <p>Perfectly pulled pork seasoned with our signature rub.</p>
+                <p><strong>Price:</strong> $20</p>
+            </div> 
+        </div>
+        <div class="menu-item">
+            <img src="BBQ-Hamburger.jpg" alt="BBQ-Hamburger">
+            <div class="item-description">
+                <h3>BBQ-Hamburger</h3>
+                <p>BBQ-Hamburger with BBQ-Pork Ribs.</p>
+                <p><strong>Price:</strong> $10</p>
+            </div> 
+        </div>
+        <!-- Add more menu items here -->
+    </div>
+    <div class="footer">
+        <p><strong>Contact us:</strong></p>
+        <p>Tel: <a href="tel:0227955050">02 2795 5050</a></p>
+        <p>FB: <a href="https://www.facebook.com/Tonysbarbquesmokehousetaipei" target="_blank">Tony's Bar B Que Smokehouse</a></p>
+        <p>Address: NO.69 Xing’an Street, Zhongshan District, Taipei City, Taipei, Taiwan</p>
+    </div>
+
+    <!-- Chat box for reservation -->
+    <div class="chat-box" id="chatBox">
+        <h3>Reservation Chat</h3>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="date" placeholder="Date (e.g., 2023-12-31)">
+        <input type="text" id="time" placeholder="Time (e.g., 19:00)">
+        <input type="number" id="guests" placeholder="Number of Guests">
+        <button onclick="submitReservation()">Submit Reservation</button>
+    </div>
+
+    <!-- <button onclick="toggleChatBox()" style="position:fixed; bottom:60px; right:20px;">Chat for Reservation</button> -->
+	
+	<button onclick="toggleChatBox()" class="reservation-button">Chat for Reservation</button>
+
+
+
+    <script>
+        // Existing JavaScript
+
+        // When the window loads, set chat box to not display
+		window.onload = function() {
+			document.getElementById('chatBox').style.display = 'none';
+		};
+
+		// Function to toggle chat box
+		function toggleChatBox() {
+			var chatBox = document.getElementById('chatBox');
+			if (chatBox.style.display === 'block') {
+				chatBox.style.display = 'none';
+			} else {
+				chatBox.style.display = 'block';
+			}
+		}
+
+        // Function to submit reservation
+function submitReservation() {
+    var name = document.getElementById('name').value;
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+    var guests = document.getElementById('guests').value;
+
+    // Log details to the console
+    console.log('Reservation details:', name, date, time, guests);
+
+    // Create a formatted message for the alert
+    var reservationMessage = 'Reservation submitted!\n\n' +
+                             'Reservation for: ' + name + '\n' +
+                             'Date: ' + date + '\n' +
+                             'Time: ' + time + '\n' +
+                             'Number of Guests: ' + guests;
+
+    // Show the alert message
+    alert(reservationMessage);
+
+    // Clear fields
+    document.getElementById('name').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('time').value = '';
+    document.getElementById('guests').value = '';
+}
+		
+		
+    </script>
+</body>
+</html>
